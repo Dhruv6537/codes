@@ -1,0 +1,97 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+class hero{
+    private:
+    int health;
+
+    public:
+    char *name;
+    char level;
+    static int timetocomplete;
+
+
+    // default constructor
+    hero(){
+        cout<<"constructor called "<<endl;  
+        name = new char[100];  
+    }
+
+    // parameterized constructor 
+    hero(int health){
+        this->health=health;
+    }    
+
+
+    hero(int health, char level){
+        this->level=level;
+        this->health=health;
+
+    }
+
+    // copy constructor
+    hero(hero &temp){
+
+        char *ch=new char[strlen(temp.name) + 1]; // +1 for null characteer
+        strcpy(ch ,temp.name);
+        this->name=ch;
+
+        cout<<"copy constructor caled "<<endl;
+        this->health = temp.health;
+        this->level = temp.level;
+    }
+    
+    void print(){
+        cout<<endl;
+        cout<<"[ Name :"<<this->name<<", ";
+        cout<<"level is :"<<level<<endl;
+        cout<<"health :"<<health<<" ]";
+
+    }
+    int gethealth(){
+    return health;
+    }
+
+    char getlevel(){
+        return level;
+    }
+
+    void sethealth(int h){
+        health=h;
+    }
+
+    void setlevel(char ch){
+        level=ch; 
+    }
+
+    void setname(char name[]) {
+        strcpy(this->name ,name);
+    }
+
+    static int random(){
+       return timetocomplete;
+    }
+
+    ~hero(){
+        cout<<"destructor called"<<endl;
+    }
+};
+
+int hero::timetocomplete =5;
+int main() {
+    // cout<< hero::timetocomplete <<endl;
+    cout << hero::random()<<endl;
+
+
+    // hero a;
+
+//     cout<<a.timetocomplete <<endl;
+
+//     hero b;
+//     b.timetocomplete = 10;
+//     cout<< a.timetocomplete <<endl;
+//     cout<< b.timetocomplete <<endl;
+// 
+}
+// no need of creting object in static function
