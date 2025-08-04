@@ -4,7 +4,7 @@ int main(){
     int n;
     printf("enter n :");
     scanf("%d",&n);
-    char s[n];
+    int s[n];
     for(int i=0;i<n;i++){
         scanf("%d",&s[i]);
     }

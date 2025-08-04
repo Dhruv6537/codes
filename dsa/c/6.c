@@ -6,21 +6,21 @@ int stack[10];
 int top=-1;
 int value;
 
-// void push(){
+void push(){
     
-//     if(top==9){
-//         printf("overflow");
-//     }
-//     else
-//     {top=top+1;
-//     printf("enter the element :");
-//     scanf("%d",&value);
-//     stack[top]=value;
-//     }
+    if(top==9){
+        printf("overflow");
+    }
+    else
+    {top=top+1;
+    printf("enter the element :");
+    scanf("%d",&value);
+    stack[top]=value;
+    }
         
 
     
-// }
+}
 
 
 void delete(){
@@ -46,15 +46,7 @@ int main(){
         scanf("%d",&n);
         switch(n){
             case 1:
-            if(top==9){
-        printf("overflow");
-    }
-    else
-    {top=top+1;
-    printf("enter the element :");
-    scanf("%d",&value);
-    stack[top]=value;
-    }
+            push();
             break;
             case 2:
             delete();

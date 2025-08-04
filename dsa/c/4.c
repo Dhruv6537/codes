@@ -1,4 +1,5 @@
 // wap to insert an element in array in particular location
+
 #include<stdio.h>
 int main(){
     int a[50];
@@ -30,7 +31,5 @@ int main(){
 
 
 
-    
-
-    
 }
+

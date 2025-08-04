@@ -50,7 +50,7 @@ int lastocc(int arr[] , int size , int key){
 int main(){
 
     int a[5] = {1,2,3,3,5};
-    cout<<"first occurundrence of 3 is at index :"<<fisrtocc(a , 5 , 3)<<endl;
+    cout<<"first occurence of 3 is at index :"<<fisrtocc(a , 5 , 3)<<endl;
     cout<<"last occurence of 3 is at index :"<<lastocc(a , 5 , 3);
 
 

@@ -1,7 +1,7 @@
 // wap to store a array and print sum of odd number
 #include<stdio.h>
 int main(){
-    int a[5];
+    int a[6];
     int sum=0;
     printf("enter the element :");
     for(int i=0;i<=5;i++){
@@ -17,6 +17,7 @@ int main(){
             sum=sum+a[i];
         };
     }
+    
     printf("%d",sum);
 
     return 0;
