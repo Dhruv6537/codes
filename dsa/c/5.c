@@ -20,7 +20,7 @@ int main(){
 
     for(int i=0 ; i<=n ; i++){
         if(i==position){
-            continue;;
+            continue;
         }
         printf("%d\n",a[i]);
     }
